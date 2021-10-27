@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Tours de Hanoi</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Les tours de Hanoi</h1>
+      <div class="form">
+        <label for="number"
+          >Nombre de disques :
+          <input
+            type="number"
+            name="numberOfDisks"
+            id="numberOfDisks"
+            onchange="initGame()"
+            value="3" /></label 
+        ><br />
+      </div>
+      <div id="gameScreen" class="gameScreen">
+        <div class="zone" id="zone1"></div>
+        <div class="zone" id="zone2"></div>
+        <div class="zone" id="zone3"></div>
+      </div>
+      <div class="form">
+        <button id="prev" onclick="initGame()">
+          <i class="fa fa-fast-backward"></i>
+        </button>
+        <button id="prev" onclick="prev()">
+          <i class="fa fa-step-backward"></i>
+        </button>
+        <button id="play"><i class="fa"></i></button>
+        <button id="next" onclick="next()">
+          <i class="fa fa-step-forward"></i>
+        </button>
+        <button id="next" onclick="toEnd()">
+          <i class="fa fa-fast-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="hanoi.js"></script>
+  </body>
+</html>
